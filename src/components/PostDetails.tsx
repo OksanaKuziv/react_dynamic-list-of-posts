@@ -43,7 +43,7 @@ export const PostDetails: React.FC<PostDetailsProps> = ({
   const handleDeleteComment = async (commentId: number) => {
     try {
       await deletePostComment(commentId);
-      setComments(prev => prev?.filter(c => c.id !== commentId) || null);
+      setComments(prev => prev?.filter(c => c.id !== commentId) || []);
     } catch {
       setErrorMessage(true);
     }

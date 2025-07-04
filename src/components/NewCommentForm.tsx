@@ -186,7 +186,6 @@ export const NewCommentForm: React.FC<NewCommentFormProps> = ({
           <button
             type="submit"
             className={cn('button is-link ', { 'is-loading': isLoading })}
-            onSubmit={handleSubmit}
           >
             Add
           </button>
